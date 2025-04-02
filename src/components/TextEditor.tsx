@@ -98,7 +98,7 @@ const TextWindow: React.FC<TextWindowProps> = ({
           value={title}
           onChange={(e) => onTitleChange(id, e.target.value)}
           placeholder="Enter window title..."
-          className="text-xl font-light tracking-wide text-zinc-100 bg-transparent border-none focus:outline-none focus:ring-0 w-full placeholder-zinc-500"
+          className="text-xl font-light tracking-wide bg-transparent border-none focus:outline-none focus:ring-0 w-full placeholder-zinc-500 bg-gradient-to-r from-orange-800 to-orange-950 text-transparent bg-clip-text"
         />
         {chatHistory && (
           <button
@@ -378,8 +378,15 @@ export default function TextEditor() {
     <div className="min-h-screen bg-black">
       <div className="max-w-[1800px] mx-auto p-12">
         <div className="mb-16">
-          <h1 className="text-5xl font-light tracking-tight text-white mb-4">AI Writing Assistant</h1>
-          <p className="text-lg text-zinc-400 font-light tracking-wide">Use multiple windows to edit and improve different aspects of your writing simultaneously.</p>
+          <h1 className="text-6xl font-semibold tracking-tight mb-4 relative">
+            <span className="bg-gradient-to-r from-orange-700 via-orange-800 to-orange-900 text-transparent bg-clip-text drop-shadow-[0_0_25px_rgba(234,88,12,0.2)]">
+              AI Writing Assistant
+            </span>
+            <div className="absolute -bottom-3 left-0 w-24 h-1 bg-gradient-to-r from-orange-800 to-orange-950 rounded-full"></div>
+          </h1>
+          <p className="text-lg text-zinc-400 font-light tracking-wide pl-1">
+            Use multiple windows to edit and improve different aspects of your writing simultaneously.
+          </p>
         </div>
         <div className="grid grid-cols-1 2xl:grid-cols-2 gap-12">
           {windows.map((window) => (
