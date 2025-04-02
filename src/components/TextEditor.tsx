@@ -91,7 +91,7 @@ const TextWindow: React.FC<TextWindowProps> = ({
   };
 
   return (
-    <div className="bg-zinc-900 rounded-xl shadow-2xl border border-zinc-800 overflow-hidden hover:shadow-[0_0_40px_rgba(0,0,0,0.3)] transition-all duration-300">
+    <div className="bg-zinc-900 rounded-xl shadow-2xl border border-zinc-800 overflow-hidden hover:shadow-[0_0_40px_rgba(255,98,0,0.15)] transition-all duration-300">
       <div className="px-8 py-6 bg-zinc-800/50 border-b border-zinc-700 flex items-center justify-between">
         <input
           type="text"
@@ -103,9 +103,9 @@ const TextWindow: React.FC<TextWindowProps> = ({
         {chatHistory && (
           <button
             onClick={() => setIsChatExpanded(!isChatExpanded)}
-            className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors"
+            className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-gradient-to-r from-orange-800 via-orange-900 to-orange-950 text-zinc-200 hover:brightness-110 transition-colors border border-orange-900/20"
           >
-            <span className="text-sm text-zinc-300">💬 View Chat</span>
+            <span className="text-sm text-zinc-200">💬 View Chat</span>
             <span className="w-2 h-2 rounded-full bg-white/50"></span>
           </button>
         )}
@@ -113,7 +113,7 @@ const TextWindow: React.FC<TextWindowProps> = ({
 
       <div className="grid grid-cols-3 gap-12 p-10">
         <div className="col-span-2 space-y-8">
-          <div className="border border-zinc-800 rounded-xl overflow-hidden bg-zinc-900/50 shadow-inner">
+          <div className="border border-zinc-800 rounded-xl overflow-hidden bg-zinc-900/50 shadow-inner hover:border-orange-500/20 transition-colors">
             <Editor
               height="500px"
               defaultLanguage="markdown"
@@ -135,7 +135,7 @@ const TextWindow: React.FC<TextWindowProps> = ({
           </div>
           <button
             onClick={handleProcessWithAI}
-            className="w-full py-5 px-8 bg-white text-black rounded-xl hover:bg-zinc-100 focus:ring-4 focus:ring-white/20 transition-all duration-200 font-light tracking-wide text-sm flex items-center justify-center space-x-3"
+            className="w-full py-5 px-8 bg-gradient-to-r from-orange-800 via-orange-900 to-orange-950 text-zinc-200 rounded-xl hover:brightness-110 focus:ring-4 focus:ring-orange-900/20 transition-all duration-300 font-light tracking-wide text-sm flex items-center justify-center space-x-3 border border-orange-900/20"
           >
             <span>Process with AI</span>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -181,7 +181,7 @@ const TextWindow: React.FC<TextWindowProps> = ({
               <div className="flex items-center space-x-4">
                 <button 
                   onClick={handleSaveChanges}
-                  className="px-4 py-2 bg-white text-black rounded-lg hover:bg-zinc-100 transition-colors text-sm"
+                  className="px-4 py-2 bg-gradient-to-r from-orange-800 via-orange-900 to-orange-950 text-zinc-200 rounded-lg hover:brightness-110 transition-all duration-300 text-sm border border-orange-900/20"
                 >
                   Save Changes
                 </button>
@@ -223,7 +223,7 @@ const TextWindow: React.FC<TextWindowProps> = ({
                   <span className="text-sm text-zinc-400">Edit Revised Version</span>
                   <button 
                     onClick={handleSaveChanges}
-                    className="px-4 py-2 bg-white text-black rounded-lg hover:bg-zinc-100 transition-colors text-sm"
+                    className="px-4 py-2 bg-gradient-to-r from-orange-800 via-orange-900 to-orange-950 text-zinc-200 rounded-lg hover:brightness-110 transition-all duration-300 text-sm border border-orange-900/20"
                   >
                     Apply Changes
                   </button>
@@ -263,7 +263,7 @@ const TextWindow: React.FC<TextWindowProps> = ({
                 />
                 <button
                   onClick={(e) => { e.preventDefault(); handleSendMessage(newMessage); }}
-                  className="px-6 py-3 bg-white text-black rounded-xl hover:bg-zinc-100 transition-colors text-sm font-light flex items-center space-x-2"
+                  className="px-6 py-3 bg-gradient-to-r from-orange-800 via-orange-900 to-orange-950 text-zinc-200 rounded-xl hover:brightness-110 transition-all duration-300 text-sm font-light flex items-center space-x-2 border border-orange-900/20"
                 >
                   <span>Send</span>
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
